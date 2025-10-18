@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block content %}
+  <h2>Create Account</h2>
+  <form method="post" id="registerForm" autocomplete="off">
+    <label>Username</label><br>
+    <input name="username" type="text" value="{{ username|default('') }}" required><br><br>
+
+    <label>Password</label><br>
+    <input id="password" name="password" type="password" required><br>
+
+    <div id="strength" class="strength">
+      <div id="bar" class="bar"></div>
+      <div id="scoreText" class="scoreText">Type a password</div>
+    </div>
+
+    <ul id="rules" class="rules">
+      <li id="r-length">At least 8 characters</li>
+      <li id="r-upper">At least 1 uppercase letter</li>
+      <li id="r-digit">At least 1 number</li>
+      <li id="r-special">At least 1 special character</li>
+      <li id="r-common">Not a commonly used password</li>
+    </ul>
+
+    <button type="submit">Create account</button>
+  </form>
+
+  <script src="{{ url_for('static', filename='password_strength.js') }}"></script>
+{% endblock %}

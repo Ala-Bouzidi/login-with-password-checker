@@ -1,0 +1,25 @@
+body { font-family: Arial, sans-serif; background:#f6f8fb; color:#222; margin:0; }
+.nav { background:#fff; padding:10px 20px; border-bottom:1px solid #eee; display:flex; gap:12px; align-items:center;}
+.nav a { color:#007bff; text-decoration:none; }
+.nav .muted { margin-left:auto; color:#555; font-size:0.9em; }
+.container { max-width:720px; margin:30px auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 8px 22px rgba(12,30,44,0.06); }
+input[type="text"], input[type="password"] { width:100%; padding:10px; margin-top:6px; margin-bottom:12px; box-sizing:border-box; border:1px solid #ddd; border-radius:6px; }
+button { padding:10px 16px; border:none; background:#007bff; color:white; border-radius:6px; cursor:pointer; }
+button:hover { opacity:0.95; }
+
+.flash-wrap { margin-bottom:12px; }
+.flash { padding:8px 12px; border-radius:6px; margin-bottom:6px; }
+.flash.success { background:#d4f7dc; color:#0a6a24; }
+.flash.danger { background:#ffe0e0; color:#7a1a1a; }
+.flash.info { background:#e8f1ff; color:#0b4ea2; }
+
+.rules { list-style:none; padding-left:0; }
+.rules li { padding:6px 8px; border-radius:6px; margin-bottom:6px; background:#fafafa; color:#555; }
+
+.rules li.ok { background:#e8f8ee; color:#0a6a24; }
+.rules li.fail { background:#fff0f0; color:#7a1a1a; }
+
+.strength { margin:8px 0 12px; }
+.bar { height:10px; background:#eee; border-radius:6px; width:100%; overflow:hidden; position:relative; }
+.bar::after { content:""; position:absolute; left:0; top:0; height:100%; width:0%; background:linear-gradient(90deg,#ff5959,#ffd86b,#7ef59b); transition: width 150ms ease; }
+.scoreText { font-size:0.9em; margin-top:8px; color:#333; }

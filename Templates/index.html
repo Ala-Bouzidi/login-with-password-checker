@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Home - Password App{% endblock %}
+{% block content %}
+  <h1>Welcome</h1>
+  {% if user %}
+    <p>Hello <strong>{{ user }}</strong> — you're signed in.</p>
+  {% else %}
+    <p>This is a demo login app. 
+        <a href="{{ url_for('register') }}">Create an account</a> or <a href="{{ url_for('login') }}">log in</a>.</p>
+  {% endif %}
+{% endblock %}
